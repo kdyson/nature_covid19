@@ -316,6 +316,9 @@ ggplot(inGardens) +
   geom_segment(aes(x = 4.75, y = 228+20, xend = 5.25, yend = 228+20)) +
   annotate(geom = "text", x = 5, y = 228+25, label = "***")
   
+ggsave(filename = "graphs/inGardensWho.jpeg", device = "jpeg",
+       units = "in", width = 5.5, height = 4)
+
 
 ## ----- Gardens: Activities -------------------------------------
 
@@ -493,17 +496,17 @@ activityGardensLMGraph$name <-
 
 ggplot(activityGardensLMGraph) + 
   geom_bar(aes(x = name, fill = value), position = position_dodge2()) +
-  labs(x = "", y = "Count", title = "Do respondents perform activities in gardens less or more often after the Covid19 pandemic?") +
+  labs(x = "", y = "Count", title = "Do respondents perform activities in gardens \nless or more often after the Covid-19 pandemic?") +
   scale_x_discrete(labels = c(
       "Relaxing",
       "Exercising",
-      "Birds and Photography",
-      "Tending Vegetables",
-      "Tending Ornamentals",
-      "Tending Orchards",
+      "Birds and \nPhotography",
+      "Tending \nVegetables",
+      "Tending \nOrnamentals",
+      "Tending \nOrchards",
       "Landscaping",
-      "Nest/Bird Hunting",
-      "Tending Livestock"
+      "Nest/Bird \nHunting",
+      "Tending \nLivestock"
     
   )) +
   scale_fill_manual(values = ggColors, name = "") +
@@ -525,6 +528,8 @@ ggplot(activityGardensLMGraph) +
   geom_segment(aes(x = 8.75, y = 117+20, xend = 9.25, yend = 117+20)) +
   annotate(geom = "text", x = 9, y = 117+25, label = "***")
 
+ggsave(filename = "graphs/activityGardens.jpeg", device = "jpeg",
+       units = "in", width = 8, height = 4)
 
 
 
@@ -697,6 +702,9 @@ ggplot(inGreenspace) +
   geom_segment(aes(x = 4.75, y = 220+20, xend = 5.25, yend = 220+20)) +
   annotate(geom = "text", x = 5, y = 220+25, label = "***")
 
+ggsave(filename = "graphs/inGreenspace.jpeg", device = "jpeg",
+       units = "in", width = 5.5, height = 4)
+
 
 ## ----- Urban parks: Transportation -----------------------
 
@@ -759,6 +767,9 @@ ggplot(transitGreenspace) +
   annotate(geom = "text", x = 2, y = 126+25, label = "***") +
   geom_segment(aes(x = 3.75, y = 162+20, xend = 4.25, yend = 162+20)) +
   annotate(geom = "text", x = 4, y = 162+25, label = "*")
+
+ggsave(filename = "graphs/transitGreenspace.jpeg", device = "jpeg",
+       units = "in", width = 5.5, height = 4)
 
 
 ## ----- Urban parks: Travel distance --------------------------
@@ -950,12 +961,12 @@ activityGreenspaceLMGraph$name <-
 
 ggplot(activityGreenspaceLMGraph) + 
   geom_bar(aes(x = name, fill = value), position = position_dodge2()) +
-  labs(x = "", y = "Count", title = "Do respondents perform activities in urban parks less or more often after the Covid19 pandemic?") +
+  labs(x = "", y = "Count", title = "Do respondents perform activities in urban parks \nless or more often after the Covid19 pandemic?") +
   scale_x_discrete(labels = c(
     "Relaxing",
     "Exercising",
-    "Birds and Photography",
-    "Nest/Bird Hunting"
+    "Birds and \nPhotography",
+    "Nest/Bird \nHunting"
     
   )) +
   scale_fill_manual(values = ggColors, name = "") +
@@ -965,6 +976,8 @@ ggplot(activityGreenspaceLMGraph) +
   geom_segment(aes(x = 3.75, y = 66+20, xend = 4.25, yend = 66+20)) +
   annotate(geom = "text", x = 4, y = 66+25, label = "***")
 
+ggsave(filename = "graphs/activityGreenspace.jpeg", device = "jpeg",
+       units = "in", width = 5, height = 4)
 
 
 
@@ -1116,6 +1129,8 @@ ggplot(inNatural) +
   geom_segment(aes(x = 4.75, y = 204+20, xend = 5.25, yend = 204+20)) +
   annotate(geom = "text", x = 5, y = 204+25, label = "***")
 
+ggsave(filename = "graphs/inNatural.jpeg", device = "jpeg",
+       units = "in", width =5.5, height = 4)
 
 
 ## ----- Natural areas: Transportation -----------------------
@@ -1179,6 +1194,11 @@ ggplot(transitNatural) +
   annotate(geom = "text", x = 2, y = 159+25, label = "**") +
   geom_segment(aes(x = 3.75, y = 164+20, xend = 4.25, yend = 164+20)) +
   annotate(geom = "text", x = 4, y = 164+25, label = "***")
+
+ggsave(filename = "graphs/transitNatural.jpeg", device = "jpeg",
+       units = "in", width = 5.5, height = 4)
+
+
 
 ## ----- Natural ares: Travel distance ------------------------------
 
@@ -1432,20 +1452,20 @@ activityNaturalLMGraph$name <-
 
 ggplot(activityNaturalLMGraph) + 
   geom_bar(aes(x = name, fill = value), position = position_dodge2()) +
-  labs(x = "", y = "Count", title = "Do respondents perform activities in natural areas less or more often after the Covid19 pandemic?") +
+  labs(x = "", y = "Count", title = "Do respondents perform activities in natural areas \nless or more often after the Covid19 pandemic?") +
   scale_x_discrete(labels = c(
     "Exercising",
     "Relaxing",
-    "Birds and Photog.",
-    "Viewing Scenery",
-    "Historic Sites",
+    "Birds and \nPhotography",
+    "Viewing \nScenery",
+    "Historic \nSites",
     "Landscaping", # significant **
-    "Cultivating Crops", # *
-    "Tending Orchards", # **
-    "Gathering Plants",
+    "Cultivating \nCrops", # *
+    "Tending \nOrchards", # **
+    "Gathering \nPlants",
     "Camping", # **
-    "Tending Livestock",
-    "Nest/Bird Hunting"
+    "Tending \nLivestock",
+    "Nest/Bird \nHunting"
   )) +
   scale_fill_manual(values = ggColors, name = "") +
   theme(legend.position = "bottom") +
@@ -1464,6 +1484,8 @@ ggplot(activityNaturalLMGraph) +
   geom_segment(aes(x = 11.75, y = 76+20, xend = 12.25, yend = 76+20)) +
   annotate(geom = "text", x = 12, y = 76+25, label = "^")
 
+ggsave(filename = "graphs/activityNatural.jpeg", device = "jpeg",
+       units = "in", width = 9.5, height = 4.5)
 
 
 
