@@ -496,7 +496,7 @@ activityGardensLMGraph$name <-
 
 ggplot(activityGardensLMGraph) + 
   geom_bar(aes(x = name, fill = value), position = position_dodge2()) +
-  labs(x = "", y = "Count", title = "Do respondents perform activities in gardens \nless or more often after the Covid-19 pandemic?") +
+  labs(x = "", y = "Count", title = "Do respondents perform activities in gardens \nless or more often after the COVID-19 pandemic?") +
   scale_x_discrete(labels = c(
       "Relaxing",
       "Exercising",
@@ -528,7 +528,7 @@ ggplot(activityGardensLMGraph) +
   geom_segment(aes(x = 8.75, y = 117+20, xend = 9.25, yend = 117+20)) +
   annotate(geom = "text", x = 9, y = 117+25, label = "***")
 
-ggsave(filename = "graphs/activityGardens.jpeg", device = "jpeg",
+ggsave(filename = "../graphs/activityGardens.jpeg", device = "jpeg",
        units = "in", width = 8, height = 4)
 
 
@@ -702,7 +702,7 @@ ggplot(inGreenspace) +
   geom_segment(aes(x = 4.75, y = 220+20, xend = 5.25, yend = 220+20)) +
   annotate(geom = "text", x = 5, y = 220+25, label = "***")
 
-ggsave(filename = "graphs/inGreenspace.jpeg", device = "jpeg",
+ggsave(filename = "../graphs/inGreenspace.jpeg", device = "jpeg",
        units = "in", width = 5.5, height = 4)
 
 
@@ -768,7 +768,7 @@ ggplot(transitGreenspace) +
   geom_segment(aes(x = 3.75, y = 162+20, xend = 4.25, yend = 162+20)) +
   annotate(geom = "text", x = 4, y = 162+25, label = "*")
 
-ggsave(filename = "graphs/transitGreenspace.jpeg", device = "jpeg",
+ggsave(filename = "../graphs/transitGreenspace.jpeg", device = "jpeg",
        units = "in", width = 5.5, height = 4)
 
 
@@ -961,7 +961,7 @@ activityGreenspaceLMGraph$name <-
 
 ggplot(activityGreenspaceLMGraph) + 
   geom_bar(aes(x = name, fill = value), position = position_dodge2()) +
-  labs(x = "", y = "Count", title = "Do respondents perform activities in urban parks \nless or more often after the Covid19 pandemic?") +
+  labs(x = "", y = "Count", title = "Do respondents perform activities in urban parks \nless or more often after the COVID-19 pandemic?") +
   scale_x_discrete(labels = c(
     "Relaxing",
     "Exercising",
@@ -976,7 +976,7 @@ ggplot(activityGreenspaceLMGraph) +
   geom_segment(aes(x = 3.75, y = 66+20, xend = 4.25, yend = 66+20)) +
   annotate(geom = "text", x = 4, y = 66+25, label = "***")
 
-ggsave(filename = "graphs/activityGreenspace.jpeg", device = "jpeg",
+ggsave(filename = "../graphs/activityGreenspace.jpeg", device = "jpeg",
        units = "in", width = 5, height = 4)
 
 
@@ -1129,7 +1129,7 @@ ggplot(inNatural) +
   geom_segment(aes(x = 4.75, y = 204+20, xend = 5.25, yend = 204+20)) +
   annotate(geom = "text", x = 5, y = 204+25, label = "***")
 
-ggsave(filename = "graphs/inNatural.jpeg", device = "jpeg",
+ggsave(filename = "../graphs/inNatural.jpeg", device = "jpeg",
        units = "in", width =5.5, height = 4)
 
 
@@ -1195,7 +1195,7 @@ ggplot(transitNatural) +
   geom_segment(aes(x = 3.75, y = 164+20, xend = 4.25, yend = 164+20)) +
   annotate(geom = "text", x = 4, y = 164+25, label = "***")
 
-ggsave(filename = "graphs/transitNatural.jpeg", device = "jpeg",
+ggsave(filename = "../graphs/transitNatural.jpeg", device = "jpeg",
        units = "in", width = 5.5, height = 4)
 
 
@@ -1452,7 +1452,7 @@ activityNaturalLMGraph$name <-
 
 ggplot(activityNaturalLMGraph) + 
   geom_bar(aes(x = name, fill = value), position = position_dodge2()) +
-  labs(x = "", y = "Count", title = "Do respondents perform activities in natural areas \nless or more often after the Covid19 pandemic?") +
+  labs(x = "", y = "Count", title = "Do respondents perform activities in natural areas \nless or more often after the COVID-19 pandemic?") +
   scale_x_discrete(labels = c(
     "Exercising",
     "Relaxing",
@@ -1484,7 +1484,7 @@ ggplot(activityNaturalLMGraph) +
   geom_segment(aes(x = 11.75, y = 76+20, xend = 12.25, yend = 76+20)) +
   annotate(geom = "text", x = 12, y = 76+25, label = "^")
 
-ggsave(filename = "graphs/activityNatural.jpeg", device = "jpeg",
+ggsave(filename = "../graphs/activityNatural.jpeg", device = "jpeg",
        units = "in", width = 9.5, height = 4.5)
 
 
